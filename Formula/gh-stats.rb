@@ -23,6 +23,6 @@ class GhStats < Formula
   end
 
   test do
-    assert_match "gh-stats", shell_output("#<built-in function bin>/gh-stats --help")
+    system "#{bin}/gh-stats", "--help"
   end
 end
