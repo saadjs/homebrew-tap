@@ -10,16 +10,19 @@ Homebrew tap for my CLI tools.
 ```sh
 brew tap saadjs/homebrew-tap
 brew install skillctl
+brew install gh-stats
 ```
 
 ## Upgrade
 
 ```sh
 brew upgrade skillctl
+brew upgrade gh-stats
 ```
 
 ## Uninstall
 
 ```sh
 brew uninstall skillctl
+brew uninstall gh-stats
 ```
