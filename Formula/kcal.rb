@@ -1,25 +1,25 @@
 class Kcal < Formula
   desc "Local-first calorie, macro, and nutrient tracking CLI"
   homepage "https://github.com/saadjs/kcal-cli"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.0/kcal-darwin-arm64"
-      sha256 "2c3461a279dd9590f3bdcfdc23761bad8222b3f4f89fbeb0aac34192d10faac7"
+      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.1/kcal-darwin-arm64"
+      sha256 "f6c699a3787528ee06da7d225453f970a176b48e2a30a303d3cf99890baf17d8"
     else
-      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.0/kcal-darwin-amd64"
-      sha256 "d3455dd563481be27a53f45ba5f08f3fc7e0f7bdd0fc107426e2e94af58cf768"
+      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.1/kcal-darwin-amd64"
+      sha256 "e63c943d90d48d52fe5d212a8aa3cc0b08980bb45c0171158f7824a900d4f753"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.0/kcal-linux-arm64"
-      sha256 "a5648088523cac4b8bf1c6ed43fff5577d7228c02c1c0ac83cbb3fec1afefb60"
+      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.1/kcal-linux-arm64"
+      sha256 "852d88a48e41e09340d56f85ad28ada7b31b9cd1aa5bdaf24c85fadacd925675"
     else
-      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.0/kcal-linux-amd64"
-      sha256 "69d3a768a39701fb68da87a4c04a9a70f2035e134d2bb98a4d5472102a81f8b5"
+      url "https://github.com/saadjs/kcal-cli/releases/download/v1.1.1/kcal-linux-amd64"
+      sha256 "4c9f907a3798e33c4fa9badaa0a8174a9a78022f6e6f1a5d081f56a654efbe31"
     end
   end
 
