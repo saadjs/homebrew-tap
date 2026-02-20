@@ -6,20 +6,20 @@ class Kcal < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/saadjs/kcal-cli/releases/download/v1.0.0/kcal-darwin-arm64"
-      sha256 "4ededb46dad8445609f94c192efdf4a4c24aaf9c8694ae68e436c02229349d9f"
+      sha256 "6164db35cdfaf9fb680dfb6f6b1b366540234984c7a4ffcf0ed1d5c506c326d5"
     else
       url "https://github.com/saadjs/kcal-cli/releases/download/v1.0.0/kcal-darwin-amd64"
-      sha256 "43348f4801699a020d64652074c26c21f8b297a9c4c149a69113f438dfc20fda"
+      sha256 "9dccdb5bed6fc6230d5c7a973bfa49ed80ea0f6a2e00e115c850dca9379a586b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/saadjs/kcal-cli/releases/download/v1.0.0/kcal-linux-arm64"
-      sha256 "4ca5b9629f1849682f38ba9fda373f285ed23f09108c51d911bd615e9c2a65fb"
+      sha256 "c0cabd36f7810512db92099233db37b213b5402419128f9d6b083ebaee077544"
     else
       url "https://github.com/saadjs/kcal-cli/releases/download/v1.0.0/kcal-linux-amd64"
-      sha256 "943a67cdd47afdc6cba064ab7767dd4c8268d4ba3090c3cd6e550be1b84dc39f"
+      sha256 "cbe86b30059dd090a5ec91e2ced8a7ed615360a2fa94a04857ef658ebf3379d6"
     end
   end
 
