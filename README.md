@@ -3,6 +3,7 @@
 [![Homebrew Tap](https://img.shields.io/badge/homebrew-tap-yellow)](https://github.com/saadjs/homebrew-tap)
 [![skillctl release](https://img.shields.io/github/v/release/saadjs/agent-skills?display_name=tag&label=skillctl)](https://github.com/saadjs/agent-skills/releases)
 [![gh-stats release](https://img.shields.io/github/v/release/saadjs/gh-stats?display_name=tag&label=gh-stats)](https://github.com/saadjs/gh-stats/releases)
+[![kcal release](https://img.shields.io/github/v/release/saadjs/kcal-cli?display_name=tag&label=kcal)](https://github.com/saadjs/kcal-cli/releases)
 
 Homebrew tap for my CLI tools.
 
@@ -12,6 +13,7 @@ Homebrew tap for my CLI tools.
 | --- | --- |
 | `skillctl` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/agent-skills?display_name=tag&label=release)](https://github.com/saadjs/agent-skills/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fskillctl-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Formula/skillctl.rb) |
 | `gh-stats` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/gh-stats?display_name=tag&label=release)](https://github.com/saadjs/gh-stats/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fgh--stats-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Formula/gh-stats.rb) |
+| `kcal` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/kcal-cli?display_name=tag&label=release)](https://github.com/saadjs/kcal-cli/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fkcal-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Formula/kcal.rb) |
 
 ## Install
 
@@ -19,6 +21,7 @@ Homebrew tap for my CLI tools.
 brew tap saadjs/homebrew-tap
 brew install skillctl
 brew install gh-stats
+brew install kcal
 ```
 
 ## Upgrade
@@ -26,6 +29,7 @@ brew install gh-stats
 ```sh
 brew upgrade skillctl
 brew upgrade gh-stats
+brew upgrade kcal
 ```
 
 ## Uninstall
@@ -33,4 +37,5 @@ brew upgrade gh-stats
 ```sh
 brew uninstall skillctl
 brew uninstall gh-stats
+brew uninstall kcal
 ```
