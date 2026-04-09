@@ -5,21 +5,21 @@
 class Genie < Formula
   desc "Translate plain English into shell commands"
   homepage "https://github.com/saadjs/genie-cli"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.2/genie_darwin_amd64.tar.gz"
-      sha256 "7d538ef7cb9aca7c3391d819831e6088220ca449db022acf4baef05425f7fbed"
+      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.3/genie_darwin_amd64.tar.gz"
+      sha256 "24d231fac101e3cb743b2e6d3f89bc52c1e9ac10ed03865523002c1c0be3d411"
 
       define_method(:install) do
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.2/genie_darwin_arm64.tar.gz"
-      sha256 "5303bcb37d3641e6b2289466b5b2be5db5b08e84f525653abff83fabc4b9b9e9"
+      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.3/genie_darwin_arm64.tar.gz"
+      sha256 "f1a10b38163efa989892433c1b8e58d1cc8f04ed335a42fa81a7556e8d509efa"
 
       define_method(:install) do
         bin.install "genie"
@@ -29,15 +29,15 @@ class Genie < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.2/genie_linux_amd64.tar.gz"
-      sha256 "717a1459911c84c92281bbc88a76889e901e70446f6d5296264fd1302880dfba"
+      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.3/genie_linux_amd64.tar.gz"
+      sha256 "6bbbf8c3a242ae955c3f2e905f627ba518bee7fd0f75c2025004ac8131313b98"
       define_method(:install) do
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.2/genie_linux_arm64.tar.gz"
-      sha256 "cadfbfb33cfac19187d69442fc57a8a4806db01d88d9fb1f1789dc2bba65180e"
+      url "https://github.com/saadjs/genie-cli/releases/download/v0.0.3/genie_linux_arm64.tar.gz"
+      sha256 "c67615ae3ddb63e4826839d731ef0970d0be529bdb1fda3aca2be6a51c8927ac"
       define_method(:install) do
         bin.install "genie"
       end
