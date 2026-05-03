@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FORMULA_DIR = ROOT / "Formula"
+CASK_DIR = ROOT / "Casks"
 README_PATH = ROOT / "README.md"
 TAP_REPO = "saadjs/homebrew-tap"
 
@@ -23,7 +24,7 @@ def github_repo_from_homepage(homepage: str) -> str:
     return match.group(1)
 
 
-def read_formula(path: Path) -> dict[str, str]:
+def read_package(path: Path, kind: str) -> dict[str, str]:
     text = path.read_text(encoding="utf-8")
     homepage = extract(r'^\s*homepage\s+"([^"]+)"', text)
     desc = extract(r'^\s*desc\s+"([^"]+)"', text) or ""
@@ -38,6 +39,7 @@ def read_formula(path: Path) -> dict[str, str]:
         "version": version,
         "homepage": homepage,
         "repo": repo,
+        "kind": kind,
     }
 
 
@@ -49,34 +51,43 @@ def table_release_badge(repo: str) -> str:
     return f"[![GitHub release](https://img.shields.io/github/v/release/{repo}?display_name=tag&label=release)](https://github.com/{repo}/releases)"
 
 
-def brew_badge(name: str) -> str:
-    install_label = name.replace("-", "--")
+def brew_badge(item: dict[str, str]) -> str:
+    install_label = item["name"].replace("-", "--")
+    dir_name = "Casks" if item["kind"] == "cask" else "Formula"
     return (
         f"[![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2F{install_label}-FBB040"
-        f"?logo=homebrew&logoColor=black)](https://github.com/{TAP_REPO}/blob/main/Formula/{name}.rb)"
+        f"?logo=homebrew&logoColor=black)](https://github.com/{TAP_REPO}/blob/main/{dir_name}/{item['name']}.rb)"
     )
+
+
+def install_command(item: dict[str, str]) -> str:
+    flag = " --cask" if item["kind"] == "cask" else ""
+    return f"brew install{flag} {item['name']}"
 
 
 def generate() -> str:
-    formulas = sorted((read_formula(path) for path in FORMULA_DIR.glob("*.rb")), key=lambda item: item["name"])
+    items = [read_package(path, "formula") for path in FORMULA_DIR.glob("*.rb")]
+    if CASK_DIR.is_dir():
+        items.extend(read_package(path, "cask") for path in CASK_DIR.glob("*.rb"))
+    items.sort(key=lambda item: item["name"])
 
-    badge_lines = "\n".join(release_badge(item["repo"], item["name"]) for item in formulas)
+    badge_lines = "\n".join(release_badge(item["repo"], item["name"]) for item in items)
     table_lines = "\n".join(
-        f"| `{item['name']}` | {table_release_badge(item['repo'])} {brew_badge(item['name'])} |"
-        for item in formulas
+        f"| `{item['name']}` | {table_release_badge(item['repo'])} {brew_badge(item)} |"
+        for item in items
     )
-    install_lines = "\n".join(f"brew install {item['name']}" for item in formulas)
-    upgrade_lines = "\n".join(f"brew upgrade {item['name']}" for item in formulas)
-    uninstall_lines = "\n".join(f"brew uninstall {item['name']}" for item in formulas)
+    install_lines = "\n".join(install_command(item) for item in items)
+    upgrade_lines = "\n".join(f"brew upgrade {item['name']}" for item in items)
+    uninstall_lines = "\n".join(f"brew uninstall {item['name']}" for item in items)
 
     return f"""# homebrew-tap
 
 [![Homebrew Tap](https://img.shields.io/badge/homebrew-tap-yellow)](https://github.com/{TAP_REPO})
 {badge_lines}
 
-Homebrew tap for my CLI tools.
+Homebrew tap for my CLI tools and apps.
 
-> This README is generated from `Formula/*.rb`. Edit the formulas or `scripts/generate_readme.py`, not this file by hand.
+> This README is generated from `Formula/*.rb` and `Casks/*.rb`. Edit those or `scripts/generate_readme.py`, not this file by hand.
 
 ## Taps
 
