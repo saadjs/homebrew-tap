@@ -1,6 +1,6 @@
 cask "view-md" do
-  version "0.1.0"
-  sha256 "f91442972e9c39403e991c7ccb287f3bce13aada2b2d1a5ffb7ffa13a0e0508c"
+  version "0.1.1"
+  sha256 "442d49a5dc2ec4057271fd3f548d6fbfda3d2709268ac877e737efb7bfa85e22"
 
   url "https://github.com/saadjs/view-md/releases/download/v#{version}/ViewMD-#{version}.dmg"
   name "ViewMD"
