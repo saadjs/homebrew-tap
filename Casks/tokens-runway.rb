@@ -12,4 +12,12 @@ cask "tokens-runway" do
   depends_on macos: :ventura
 
   app "Runway.app"
+
+  zap trash: [
+    "~/Library/Caches/app.runway",
+    "~/Library/HTTPStorages/app.runway",
+    "~/Library/HTTPStorages/app.runway.binarycookies",
+    "~/Library/Preferences/app.runway.plist",
+    "~/Library/Saved Application State/app.runway.savedState",
+  ]
 end
