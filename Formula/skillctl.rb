@@ -1,21 +1,21 @@
 class Skillctl < Formula
   desc "Install and manage agent skills"
-  homepage "https://github.com/saadjs/agent-skills"
-  version "1.2.0"
+  homepage "https://github.com/saadjs/skillctl"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/saadjs/agent-skills/releases/download/v1.2.0/skillctl_1.2.0_darwin_arm64.tar.gz"
-      sha256 "acb99d51d4061c6a866bcf69f5539c2d68ab3ffe57a42c63023dc62c512a448b"
+      url "https://github.com/saadjs/skillctl/releases/download/v1.3.0/skillctl_1.3.0_darwin_arm64.tar.gz"
+      sha256 "01eef351c4372bd6431439580261ce8b37f32c1b233103cdb748d13e67b37f0e"
     else
-      url "https://github.com/saadjs/agent-skills/releases/download/v1.2.0/skillctl_1.2.0_darwin_amd64.tar.gz"
-      sha256 "e4a98d11c9181903b3f3b384d6e6d1f1500b5256f13555e6891a7daf005f187b"
+      url "https://github.com/saadjs/skillctl/releases/download/v1.3.0/skillctl_1.3.0_darwin_amd64.tar.gz"
+      sha256 "1daf86842960143c3d25ecc7e25849ae89911e15231c078a68db54718af7087d"
     end
   end
 
   on_linux do
-    url "https://github.com/saadjs/agent-skills/releases/download/v1.2.0/skillctl_1.2.0_linux_amd64.tar.gz"
-    sha256 "2bfd6129ec789415a57d93fc2d259767e9baa449a1ae47c1f4f9724b87be0500"
+    url "https://github.com/saadjs/skillctl/releases/download/v1.3.0/skillctl_1.3.0_linux_amd64.tar.gz"
+    sha256 "bd11be6b79094f4d4c28b521c6fc0137b3d3ad7edeb518555ec55becb1643b5e"
   end
 
   def install
