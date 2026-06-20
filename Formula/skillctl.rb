@@ -23,6 +23,6 @@ class Skillctl < Formula
   end
 
   test do
-    assert_match "skillctl", shell_output("#<built-in function bin>/skillctl --help")
+    assert_match "skillctl", shell_output("#{bin}/skillctl --help")
   end
 end
