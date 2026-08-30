@@ -6,6 +6,7 @@
 [![gh-stats release](https://img.shields.io/github/v/release/saadjs/gh-stats?display_name=tag&label=gh-stats)](https://github.com/saadjs/gh-stats/releases)
 [![hush release](https://img.shields.io/github/v/release/saadjs/hush?display_name=tag&label=hush)](https://github.com/saadjs/hush/releases)
 [![kcal release](https://img.shields.io/github/v/release/saadjs/kcal-cli?display_name=tag&label=kcal)](https://github.com/saadjs/kcal-cli/releases)
+[![octobase release](https://img.shields.io/github/v/release/saadjs/octobase?display_name=tag&label=octobase)](https://github.com/saadjs/octobase/releases)
 [![skillctl release](https://img.shields.io/github/v/release/saadjs/skillctl?display_name=tag&label=skillctl)](https://github.com/saadjs/skillctl/releases)
 [![tokens-runway release](https://img.shields.io/github/v/release/saadjs/Runway?display_name=tag&label=tokens-runway)](https://github.com/saadjs/Runway/releases)
 [![view-md release](https://img.shields.io/github/v/release/saadjs/view-md?display_name=tag&label=view-md)](https://github.com/saadjs/view-md/releases)
@@ -23,6 +24,7 @@ Homebrew tap for my CLI tools and apps.
 | `gh-stats` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/gh-stats?display_name=tag&label=release)](https://github.com/saadjs/gh-stats/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fgh--stats-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Formula/gh-stats.rb) |
 | `hush` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/hush?display_name=tag&label=release)](https://github.com/saadjs/hush/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fhush-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Casks/hush.rb) |
 | `kcal` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/kcal-cli?display_name=tag&label=release)](https://github.com/saadjs/kcal-cli/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fkcal-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Formula/kcal.rb) |
+| `octobase` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/octobase?display_name=tag&label=release)](https://github.com/saadjs/octobase/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Foctobase-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Casks/octobase.rb) |
 | `skillctl` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/skillctl?display_name=tag&label=release)](https://github.com/saadjs/skillctl/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fskillctl-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Formula/skillctl.rb) |
 | `tokens-runway` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/Runway?display_name=tag&label=release)](https://github.com/saadjs/Runway/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Ftokens--runway-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Casks/tokens-runway.rb) |
 | `view-md` | [![GitHub release](https://img.shields.io/github/v/release/saadjs/view-md?display_name=tag&label=release)](https://github.com/saadjs/view-md/releases) [![brew install](https://img.shields.io/badge/brew%20install-saadjs%2Ftap%2Fview--md-FBB040?logo=homebrew&logoColor=black)](https://github.com/saadjs/homebrew-tap/blob/main/Casks/view-md.rb) |
@@ -36,6 +38,7 @@ brew install genie
 brew install gh-stats
 brew install --cask hush
 brew install kcal
+brew install --cask octobase
 brew install skillctl
 brew install --cask tokens-runway
 brew install --cask view-md
@@ -49,6 +52,7 @@ brew upgrade genie
 brew upgrade gh-stats
 brew upgrade hush
 brew upgrade kcal
+brew upgrade octobase
 brew upgrade skillctl
 brew upgrade tokens-runway
 brew upgrade view-md
@@ -62,6 +66,7 @@ brew uninstall genie
 brew uninstall gh-stats
 brew uninstall hush
 brew uninstall kcal
+brew uninstall octobase
 brew uninstall skillctl
 brew uninstall tokens-runway
 brew uninstall view-md
