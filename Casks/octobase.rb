@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "octobase" do
-  version "1.0.0"
-  sha256 "9cfc7c4672fd366ae2b64beba1898b356201058c6b5f794dd2178e2391ee28df"
+  version "1.0.1"
+  sha256 "875ea41abaeaa5c8f46af5cd86509af70413bd5fcfcc0274087237ca349a645d"
 
   url "https://github.com/saadjs/octobase/releases/download/v#{version}/octobase-#{version}-safari.zip"
   name "Octobase"
