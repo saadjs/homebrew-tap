@@ -1,9 +1,9 @@
 class CommitCli < Formula
   desc "Write and organize git commits with a coding-agent CLI"
   homepage "https://github.com/saadjs/commit-cli"
-  url "https://github.com/saadjs/commit-cli/releases/download/v0.0.1/commit-cli-0.0.1.tgz"
-  sha256 "1023223e0b346d3272972d47b17661d9b7711d65d503566cd3adbc19dd948780"
-  version "0.0.1"
+  url "https://github.com/saadjs/commit-cli/releases/download/v0.1.1/commit-cli-0.1.1.tgz"
+  sha256 "4a21855e32cdc1d53b50335ff3938e74b3f72ad4d5ac48a7db1ea9366ffe2faf"
+  version "0.1.1"
   license "MIT"
 
   depends_on "node"
