@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "pane" do
-  version "0.1.0"
-  sha256 "cfcc14496a35bada0a479dff711f925fdd82ea4b76602e9ddb9585ddb8785028"
+  version "0.2.0"
+  sha256 "348de84ffbb497e8875ab1d4c711aa5583ff182b5c5badfd8cb9416194c47366"
 
   url "https://github.com/saadjs/pane-wm/releases/download/v#{version}/Pane-#{version}.zip"
   name "Pane"
@@ -21,7 +21,7 @@ cask "pane" do
   uninstall quit: "sh.saad.pane"
 
   zap trash: [
-    "~/Library/Application Support/sh.saad.pane",
+    "~/.config/pane",
     "~/Library/Preferences/sh.saad.pane.plist",
   ]
 
