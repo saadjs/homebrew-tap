@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "hush" do
-  version "2026.08.30"
-  sha256 "92e1c931305eba0a37af0c1dc88a8719ed11451f4d0a0d46c75f86bf59fc3785"
+  version "2026.10.23"
+  sha256 "691cadd9e66914ba1454fc9017bfb745995c93c2b29fd5cb3bb0012b2ffcff4b"
 
   url "https://github.com/saadjs/hush/releases/download/v#{version}/Hush-#{version}.zip"
   name "Hush"
