@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "tokens-runway" do
-  version "1.9"
-  sha256 "5f492ae18afac2f36388db38acbe642ed622daa2a96bd3e0b77b7c15589abab8"
+  version "1.10"
+  sha256 "670bf78b0ce29410f4b5f4ed7f8f05d900b2cf222d9b82fd546c48280d4373c8"
 
   url "https://github.com/saadjs/Runway/releases/download/v#{version}/Runway-#{version}.zip"
   name "Runway"
